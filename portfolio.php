@@ -19,25 +19,30 @@
 <!-- Portfolio Gallery Grid -->
 <div class="row">
   <div class="column">
-  <h2>ONLINE BANKING WEBSITE</h2>
+  <h2>Online Banking Website</h2>
       <img src="image/port1.png" style="width:90%;">
     
   </div>
 
   <div class="column">
-  <h2>E-COMMERCE WEBSITE</h2>
+  <h2>E-commerce Website</h2>
       <img src="image/port2.png"  style="width:90%;">
 </div>
 
 
   <div class="column">
-  <h2>PORTFOLIO WEBSITE</h2>
+  <h2>Portfolio Website</h2>
       <img src="image/port3.jpg" style="width:90%;">
 </div>
   
   <div class="column">
-  <h2>BUSINESS WEBSITE</h2>
+  <h2>Business Website</h2>
       <img src="image/port4.jpg"  style="width:90%;">
+ </div>
+
+ <div class="column">
+  <h2>Bitcoin Website</h2>
+      <img src="image/Bitcoin.jpg"  style="width:90%;">
  </div>
   </div>
 <!-- END MAIN -->
@@ -83,6 +88,8 @@ hr{
 
 .row h2{
     text-align: center;
+    font-family: Segoe ;
+    font-size: 20px;
 }
 
 

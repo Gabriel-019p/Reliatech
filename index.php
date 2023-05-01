@@ -1,3 +1,10 @@
+<?php
+require 'config/database.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +24,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="Portfolio.php">Portfolio</a></li>
+        <li><a href="Portfolio.php">Catalogue</a></li>
 </ul>
     <div class="web"><a href="#contact">Get a Website</a></div>
 </div>
@@ -57,14 +64,30 @@
 
 </section>
 
+
+
+<!-----------new section------------------->
+<section class="over">
+<h1>Over 110 Clients from Different Countries</h1>
+
+<div class="client">
+
+  <div class="four">
+  <h4>110+</h4>
+  <h6>Clients</h6>
+  </div>
+
+<div class="finish">
+  <h4>126+</h4>
+  <h6>Finished Projects</h6>
+</div>
+
+
+</div>
+</section>
+
 <!------about begins------>
 <section class="about" id="about">
-
-<div class="who">
-<h4>Who We Are</h4>
-<h6>Reliatech is a Web Development Agency, that provides innovative, creative and strategic websites for forward-thinking companies. We specialize in brand identity, website production and search engine optimization driven by a passion for building positive connections between brands and human emotions. We work closely with startups, corporates and advertising agencies all over the world to create iconic brands and engaging experiences that connect people to brands and organizations.</h6>
-<div class="learn"><a href="">Learn More</a></div>
-</div>
 
 <div class="whopic">
     <div class="whobg">
@@ -74,27 +97,36 @@
     </div>
 </div>
 
+<div class="who">
+<h4>Who We Are</h4>
+<h6>Reliatech is a Web Development Agency, that provides innovative, creative and strategic websites for forward-thinking companies. We specialize in brand identity, website production and search engine optimization driven by a passion for building positive connections between brands and human emotions. We work closely with startups, corporates and advertising agencies all over the world to create iconic brands and engaging experiences that connect people to brands and organizations.</h6>
+<div class="learn"><a href="about.php">Learn More</a></div>
+</div>
+
+
+
 </section>
 
 <!-----------services begins------->
 <section class="services" id="services">
-    <h4>Services We Provide<h4>
+  <h4>Services We Provide<h4>
+
    <div class="service-flex">
        
      <div class="serv">
-        <img src="image/web4.png" style="height:100px;">
+        <img src="image/web4.png" style="width:23%;">
         <h4>Web Development & Design</h4>
         <h6>The Importance of a Web development & Design to any business in todays world cannot be Overemphasized.</h6>
      </div>
 
      <div class="serv">
-     <img src="image/web5.png" style="height:100px;">
+     <img src="image/web5.png" style="width:23%;">
         <h4>Web Maintenance</h4>
         <h6>At Reliatech, we are dedicated to maintaining your site for your, ensuring your website is up to date, regularly updating content and fixing any brokwn links.</h6>
      </div>
 
      <div class="serv">
-     <img src="image/web6.png" style="height:100px;">
+     <img src="image/web6.png" style="width:23%;">
         <h4>Web Technology Consulting</h4>
         <h6>Reliatech Offers Prospective & Existing Clients the opportunity to outsource some of their IT-related Work. </h6>
      </div>
@@ -106,14 +138,14 @@
 
 
 <section class="how">
-
 <h4 class="work">How it works</h4>
+
 
 <div class="how-flex">
 
 <div class="imgbg">
 <div class="img">
-<img src="image/web1.jpg" style="height:300px">
+<img src="image/web1.jpg" style="height:280px">
 </div>
 </div>
 <div>
@@ -162,17 +194,17 @@
   <div class="containerd">
     <div class="get">Get In Touch</div>
     <div class="touch">
-    <form action="https://formsubmit.co/gabrieladdams09@gmail.com" method="POST" >
+    <form action="index-logic.php" enctype="multipart/form-data" method="POST" >
 
       <div class="form">
     <div>
-      <input type="text" id="name" name="name" placeholder="Enter Full Name">
+      <input type="text" class="input" name="name" placeholder="Enter Full Name">
     </div>
     <div>
-      <input type="text" id="Phoneno" name="Phone Number" placeholder="Enter Phone Number">
+      <input type="text" class="input" name="number" placeholder="Enter Phone Number">
     </div>
     <div>
-      <input type="text" id="email"  name="email" placeholder="Enter Email" >
+      <input type="text" class="input" name="email" placeholder="Enter Email">
     </div>
     <div>
       <select id="country" name="country">
@@ -185,9 +217,9 @@
     </div>
      <div>
       </div>
-      <textarea id="subject" name="subject" placeholder="Hello there! What can we do for you today?" style="height:160px"></textarea>
+      <textarea id="msg" name="msg" placeholder="Hello there! What can we do for you today?" style="height:160px"></textarea>
   <div>
-      <input type="submit" value="Send">
+      <input class="" type="submit" name="submit" value="Send">
   </div>
   </div>
   </div>
@@ -200,13 +232,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="contain">
+
 <span class="head">User Rating</span>
+<div class="cont">
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
 <p>4.1 average based on 254 reviews.</p>
+</div>
 <hr style="border:3px solid #f1f1f1">
 
 <div class="row">
@@ -268,21 +303,24 @@
 </div>
     </div>
 
-<footer>
-<div class="foot"><img src="image/relia.png" style="height:370px;"></div>
+ <a href="https://wa.me/+2349138861254" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a></div>
+  
 
-<div>
-<ul class="footer-link">
-  <li><a href="">Home</a></li>
-  <li><a href="">About</a></li>
-  <li><a href="">Services</a></li>
-  <li><a href="">Portfolio</a></li>
-  <li><a href="">Get a Website</a></li>
-</ul>
+<footer>
+
+<div class="icon">
+<img src="image/twitter.png" style="width:2%;">
+<img src="image/facebook.png" style="width:2%;">
+<img src="image/whatsapp.png" style="width:2%;">
 </div>
+
+
+<h6 class="copy">Copyright 2023 by Reliatech. All Rights Reserved.</h6>
+
 </footer>
 
-<script src="script.js"></script>
+
+<script src="js/script.js"></script>
     
 </body>
 </html>
@@ -332,7 +370,7 @@ nav .navbar{
     margin-top: -135px;
 }
 
-nav .navbar img{
+nav .navbar .logo img{
 width:40%;
 }
 
@@ -343,12 +381,26 @@ nav .web a{
      color: white;
      background:darkred;
      padding: 13px;
-     
+     cursor: pointer;
 }
 
 nav .web{
     margin-top:29px;
 }
+.checkbox div{
+  width: 30px;
+  height: 4px;
+  background-color: darkred;
+  margin: 6px 0;
+  display: none;
+}
+
+/*media query*/
+
+.webe {
+  display: none;
+}
+
 
 /*-----home begin-----*/
 .home{
@@ -370,12 +422,32 @@ nav .web{
     font-weight: 500;
 }
 
+/*------over-----*/
+.over h1{
+  font-size:50px;
+  text-align: center;
+  margin-top:7%;
+  font-weight: 500;
+}
+
+.over .client{
+  display: flex;
+  width: 30%;
+  justify-content:space-between;
+  margin-left: 52%;
+}
+
+.over .client h4{
+  font-size:25px;
+}
+
 /*---About begins----*/
 .about{
     display: flex;
+    margin-top: 3%;
 }
 .about h4{
-    font-size: 35px;
+    font-size: 33px;
     padding-top: 10%;
     margin-left: 4%;
     font-family: Segoe;
@@ -398,6 +470,7 @@ nav .web{
     background: darkred;
     margin-right:80%;
     text-align: center;
+    padding:1%;
 }
 
 .learn a{
@@ -418,7 +491,7 @@ nav .web{
 
 /*-------services begins---------*/
 .services h4{
-    font-size:40px;
+    font-size:33px;
     padding-top:6%;
     text-align: center;
     font-family: Segoe;
@@ -435,20 +508,23 @@ nav .web{
 }
 
 .services .service-flex h4{
-  font-size:30px;
+  font-size:23px;
+  font-weight: 500;
   font-weight: 500;
 }
 
 .services .service-flex h6{
-  font-size:20px;
+  font-size:17px;
+  font-family:segoe;
 }
 
+
 .services .serv{
-    width:25%;
+    width:30%;
     border:1px solid black;
     padding: 1%;
-    border-radius:7%;
 }
+
 
 
 /* ------how it works-----*/
@@ -457,7 +533,7 @@ nav .web{
 }
 
 .how .work{
-    font-size:40px;
+    font-size:33px;
     padding-top:6%;
     text-align: center;
     font-family: Segoe;
@@ -499,6 +575,10 @@ nav .web{
     color:darkred;
 }
 
+.how h6 .step{
+  text-align: center;
+}
+
 /*----Contact--------*/
 .contact{
     background-color:#faf8f8;
@@ -507,7 +587,7 @@ nav .web{
 .form{
     padding-top:20px;
 }
-input[type=text], select, textarea {
+.form input[type=text], select, textarea {
     width: 40%; 
     padding: 12px; 
     border: 1px solid black; 
@@ -519,7 +599,7 @@ input[type=text], select, textarea {
     background: none;
   }
   
-  input[type=submit] {
+  .form input[type=submit] {
     background-color: darkred;
     color: white;
     padding: 12px 20px;
@@ -529,7 +609,7 @@ input[type=text], select, textarea {
     font-weight:500;
   }
   
-  input[type=submit]:hover {
+  .form input[type=submit]:hover {
     background:none;
     border:2px solid darkred;
     color: black;
@@ -608,40 +688,355 @@ input[type=text], select, textarea {
 .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
 .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
 
-/*----Newsletter-----*/
-footer{
-    margin-top:10%;
-    height:250px;
-    background: #FAF9F6;
-    border-top: 2px solid darkred;
-    display:flex;
+
+/*whatsapp design*/
+.whatsapp_float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:white;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow:1px 1px 2px #999;
+    z-index:100;
+  }
+
+  .whatsapp-icon {
+    margin-top:16px;
+  }
+
+.help{
+    position: fixed;
+    font-size: 40px;
 }
 
-footer .foot{
-margin-top:-5%;
-margin-left:-3%;
+/*----footer-----*/
+
+ footer{
+  margin-top: 5%;
+  background: #B2BEB5;
+  height:140px;
+  padding: 4%;
+ }
+
+ footer .icon {
+  margin-left: 47%;
+ }
+
+ footer h6{
+  text-align: center;
+ }
+
+
+
+
+
+
+
+/*----------Media Query----------*/
+
+@media screen and (max-width: 500px)
+{ 
+   .home{
+    margin-top: -26%;
+    background-size:contain;
+    height:200px; 
 }
 
-footer .footer-link{
-    padding-top: 12%;
-    margin-left:40%;
+}
+@media screen and (max-width: 928px) 
+{
+
+  .navbar{
+    display:inline;
+  }
+
+  nav .navbar .logo img{
+    margin-top: -14%;
+    margin-left: 115px;
+  }
+  .home{
+    margin-top: -36%;
+    background-size:contain;
+    height:200px; 
+}
+ul li{
+ display: none;
 }
 
-footer .footer-link a{
-  text-decoration: none;
-  font-size:20px;
+.web{
+  display: none;
+ 
 }
 
-footer .footer-link li{
-    list-style: none;
-    padding-top:11%;
+
+
+.home .text2{
+      display: none;
 }
 
-footer .icon{
-    display: flex;
-    margin-top: -8%;
-    margin-left: 4%;
-    width: 10%;
-    justify-content: space-between;
+.over h1{
+  font-size: 30px;
+}
+
+.over .client{
+  width:60%;
+   margin-left: 90px;
+}
+
+.client h4{
+   background:orange;
+   padding:4px;
+   border-radius:5px;
+}
+
+.over .finish{
+  margin-left: -55%;
+}
+
+.about{
+  display: inline;
+  text-align: center;
+}
+
+.about h4{
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.about h6{
+  margin-left: 9%;
+  font-size: 17px;
+  line-height:30px;
+}
+
+.about .whopic{
+     width:100%;  
+     margin-top: 6%;   
+}
+
+.about .whopic img{
+  width: 105%;
+  padding-left:-20px;
+}
+
+.whobg{
+  width:100%;
+  border-bottom-left-radius: ;
+}
+
+.who .learn{
+  font-size:15px;
+  width:50%;
+  margin-left:25%;
+  border-radius: 5px;
+}
+
+.services{
+  margin-top:5%;
+}
+
+.services h4{
+  font-size:27px;
+}
+
+.services .serv h4{
+  font-size:23px;
+}
+.services .service-flex{
+  display: inline;
+}
+
+.services .serv{
+  width: 90%;
+  margin-left:5%;
+  padding:3%;
+  border:none;
+}
+
+.how .how-flex{
+  display: inline;
+ 
+}
+
+.img img {
+  width: 100%;
+  border-bottom-left-radius:35%;
+}
+
+.step{
+  
+  display: inline;
+}
+
+.steps{
+  margin-top:12%;
+  padding-left:40px;
+}
+
+.steps img{
+  margin-left: 110%;
+}
+
+.steps h4{
+  margin-left: 98%;
+  width:100%;
+}
+.steps h5{
+  margin-left: 105%;
+  width:100%;
+}
+.steps h6{
+  width:290%;
+
+}
+
+.contain .head{
+  font-size: 15px;
+}
+
+.form{
+  width:100%;
+}
+
+.form input[type=text], select, textarea {
+    width: 80%; 
+  }
+
+  .contain .head{
+    text-align: center;
+  }
+  .contain .cont{
+    width:100%;
+  }
+
+}
+
+@media screen and (max-width: 1100px) and (min-width: 700px)
+{
+
+  nav{
+    border-bottom: none;
+    height:85px;
+  }
+ .navbar .menu{
+   display: none;
+ }
+ nav .navbar .logo{
+  margin-left:23%;
+ }
+
+
+ .navbar .web{
+  display: none;
+ }
+
+ .home{
+    margin-top:1px;
+    background-size:cover;
+    height:400px; 
+}
+
+.over h1{
+  font-size: 30px;
+}
+
+.over .client{
+  width:40%;
+  margin-left:30%;
+}
+
+.client h4{
+   background:orange;
+   padding:4px;
+   border-radius:5px;
+}
+.about{
+  display: inline;
+}
+
+.about .whopic{
+  display: none;
+}
+
+.about .who h4{
+  text-align: center;
+}
+
+.about .who h6{
+  margin-left:10%;
+}
+
+.about .who .learn{
+  margin-left:35%;
+  width: 30%;
+}
+
+.how .how-flex{
+  display: inline;
+}
+
+.how .img img{
+  width: 84%;
+  margin-left: 5%;
+  margin-right:15%;
+}
+
+.how .imgbg{
+  margin-right: 15%;
+  margin-left:15%;
+}
+
+.how .step{
+  margin-top: 10%;
+  display: flex;
+  width:60%;
+}
+
+.how .steps{
+  width:30%;
+  margin-left: -20%;
+}
+
+.form{
+  width:90%;
+  margin-left: 5%;
+}
+.form input[type=text], select, textarea {
+    width: 80%; 
+  }
+
+.contain .head{
+  margin-left:20%;
+}
+.contain .cont{
+  margin-left: 20%;
+}
+
+.foter{
+  height:100px;
+}
+
+.foter .foot{
+  display: none
+}
+
+.footer .copy{
+  font-size: 25px;
+}
+
+.foter .icon{
+  width: 35%;
+
+}
+
+.foter .icon img{
+  margin-left: 20px;
+}
+
 }
 </style>
