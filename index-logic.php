@@ -27,7 +27,7 @@ if(isset($_POST['submit'])) {
         if(!mysqli_errno($connection)) {
             //redirect to login page with success message
             $_SESSION['index-success'] = "message successful Sent. Please Await our reply";
-            header('location:  index.php');
+            header('location:  thankyou.php');
             die();
         }
     }

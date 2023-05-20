@@ -40,7 +40,7 @@ unset($_SESSION['register-data']);
          <?php endif?>
       </div>
 
-    <div class="rel"><img src="images/relia.png" style="width:18%;"></div>
+  
 
     <form action="register-logic.php" enctype="multipart/form-data" method="POST"> 
         <div class="container">
@@ -98,7 +98,6 @@ unset($_SESSION['register-data']);
 <style>
 form{
     margin-left:35%;
-    margin-top:-6%;
     border: 1px solid black;
     width: 30%;
     padding:2%;
@@ -170,7 +169,12 @@ form{
 
 @media screen and (max-width: 1100px)
   {
-    
+    form{
+  width: 90%;
+  margin-left: 13px;
+  margin-top: 60px;
+ }
+
   }
 
 </style>

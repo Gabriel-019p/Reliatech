@@ -88,8 +88,8 @@ span{
 @media screen and (max-width: 700px)
 {
 .container{
-    width: 98%;
-    margin-left: -1px;
+    width: 88%;
+    margin-left: 3px;
 }
 
 .container .flex{
@@ -101,14 +101,35 @@ span{
     font-size:15px;
 }
 
+
+
 }
 
 @media screen and (max-width: 1100px)
   {
-    .container {
-    padding: 5%;
-  
+    .container{
+    width: 96%;
+    margin-left: 5px;
 }
+
+.container .flex{
+    width: 85%;
+    text-align: center;
+}
+
+.name{
+    font-size: 20px;
+}
+
+.email{
+    font-size: 20px;
+}
+
+.message{
+    font-size: 20px;
+}
+
+
 
   }
 

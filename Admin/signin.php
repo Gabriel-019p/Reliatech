@@ -22,8 +22,6 @@ unset($_SESSION['signin-data']);
 </head>
 <body>
          
-     <div class="rel"><img src="images/relia.png" style="width:17%;"></div>
-
        <form  action=" signin-logic.php" method="POST">
          <div class="formm">
          <div class="container">
@@ -67,7 +65,7 @@ unset($_SESSION['signin-data']);
 
 form{
   margin-left: 35%;
-  margin-top:-5%;
+  margin-top:10%;
   border: 1px solid black;
   width: 30%;
   padding: 1%;
@@ -119,7 +117,6 @@ input{
   form{
     width: 90%;
     margin-left: -1px;
-    margin-top: 120px;
     padding:20px;
     border:none;
   }
@@ -134,6 +131,16 @@ input{
     border: 1px solid black;
     width: 98%;
     margin-left: -1px;
+  }
+
+}
+
+@media screen and (max-width: 1180px) and (min-width: 700px)
+{
+  form{
+    width: 80%;
+    margin-left: 50px;
+    padding:20px;
   }
 
 }

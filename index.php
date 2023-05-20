@@ -13,27 +13,38 @@ require 'config/database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
 
 <!---------navbar begins----------->
 <nav>
     <div class="navbar">
-    <div class="logo"><img src="image/relia.png"></div>
+    <div class="logo"><span class="re">R</span><span class="el">elia</span><span class="te">tech</span></div>
     <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="Portfolio.php">Catalogue</a></li>
 </ul>
     <div class="web"><a href="#contact">Get a Website</a></div>
+
+    <div class="menu-btn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </div>
 </div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.php">Home</a>
+  <a href="about.php">About</a>
+  <a href="portfolio.php">Catalogue</a>
 </nav> 
+
+
 
 <!-----home begin------->
 <section class="home" id="home">
 
-<div class="slideshow-container">
+   <div class="slideshow-container">
 
          <div class="mySlides">
                 <!--<img src="images/img19.webp" style="width:800px; height: 300px;"-->
@@ -62,29 +73,33 @@ require 'config/database.php';
               </div>
            </div>
 
-</section>
+      <div class="wab">
+       <h3>WEBSITE DESIGN AND DEVELOPMENT AGENCY</h3>
+       <h3></h3>
 
+       <div class="requ"><a href="#contact">Request Quote</a></div>
+       </div>
+    
+</section>
 
 
 <!-----------new section------------------->
-<section class="over">
-<h1>Over 110 Clients from Different Countries</h1>
+<section class="container">
+<div class="static-text"> Get your</div>
+<ul class="dynamic-text">
+  <li><span>Portfolio</span></li>
+  <li><span>Crytocurrency</span></li>
+  <li><span>Ecommerce</span></li>
+  <li><span>Online Banking</span></li>
+  <li><span>Busimess</span></li>
+  <li><span>Blog</span></li>
+  <li><span>Landing Page</span></li>
+  
+</ul>
+<div class="static-text">Website</div>
 
-<div class="client">
-
-  <div class="four">
-  <h4>110+</h4>
-  <h6>Clients</h6>
-  </div>
-
-<div class="finish">
-  <h4>126+</h4>
-  <h6>Finished Projects</h6>
-</div>
-
-
-</div>
 </section>
+<div class="req"><a href="#contact">Request Quote</a></div>
 
 <!------about begins------>
 <section class="about" id="about">
@@ -114,24 +129,57 @@ require 'config/database.php';
    <div class="service-flex">
        
      <div class="serv">
-        <img src="image/web4.png" style="width:23%;">
-        <h4>Web Development & Design</h4>
+      <div class="serv1">
+        <img src="image/img.jpg" style="width:100%; height:240px;">
+        <h4>WEBSITE DEVELOPMENT AND DESIGN</h4>
         <h6>The Importance of a Web development & Design to any business in todays world cannot be Overemphasized.</h6>
+      </div>
      </div>
 
      <div class="serv">
-     <img src="image/web5.png" style="width:23%;">
-        <h4>Web Maintenance</h4>
-        <h6>At Reliatech, we are dedicated to maintaining your site for your, ensuring your website is up to date, regularly updating content and fixing any brokwn links.</h6>
-     </div>
+      <div class="serv2">
+     <img src="image/ui2.jpg" style="width:100%; height:240px;">
+        <h4>UI/UX DESIGN</h4>
+        <h6>At Reliatech, we are dedicated to maintaining your site for your, ensuring your website is up to date, regularly updating content and fixing any broken links.</h6>
+       </div>
+      </div>
 
      <div class="serv">
-     <img src="image/web6.png" style="width:23%;">
-        <h4>Web Technology Consulting</h4>
+      <div class="serv3">
+     <img src="image/main2.png" style="width:100%; height:240px;">
+        <h4>WEBSITE MAINTENANCE</h4>
         <h6>Reliatech Offers Prospective & Existing Clients the opportunity to outsource some of their IT-related Work. </h6>
-     </div>
+</div>
+      </div>
 
    </div> 
+</section>
+
+<!---------why choose us----------->
+<section class="choose">
+
+<h2>WHY CHOOSE US</h2>
+<div class="choose-flex">
+
+<h6>DIGITAL SOLUTIONS</h6>
+<h6>EXPERIENCE</h6>
+<h6>10 YEARS IN WEB DEVELOPMENT</h6>
+<h6>99.9% UPTIME GUARANTEE</h6>
+
+</div>
+
+  <div class="over-flex">
+<div class="cli">
+  <h1>200+</h1>
+  <h5>Clients</h5>
+</div>
+
+<div class="finis">
+  <h1>235+</h1>
+  <h5>Finished Projects</h5>
+</div>
+</div>
+
 </section>
 
 <!-----------how it works ------------------>
@@ -148,7 +196,9 @@ require 'config/database.php';
 <img src="image/web1.jpg" style="height:280px">
 </div>
 </div>
+
 <div>
+
 <div class="step">
 
 <div class="steps">
@@ -188,10 +238,12 @@ require 'config/database.php';
 
 </section>
 
+
+
 <!---------Contact------------>
 <section class="contact" id="contact">
   
-  <div class="containerd">
+   <div class="containerd">
     <div class="get">Get In Touch</div>
     <div class="touch">
     <form action="index-logic.php" enctype="multipart/form-data" method="POST" >
@@ -212,6 +264,9 @@ require 'config/database.php';
         <option value="ghana">Ghana</option>
         <option value="usa">USA</option>
         <option value="uk">United Kingdom</option>
+        <option value="uk">Canada</option>
+        <option value="uk">Australia</option>
+        <option value="uk">South Africa</option>
         <option value="others">Others</option>
       </select>
     </div>
@@ -240,7 +295,7 @@ require 'config/database.php';
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
-<p>4.1 average based on 254 reviews.</p>
+<p>4.1 average based on 105 reviews.</p>
 </div>
 <hr style="border:3px solid #f1f1f1">
 
@@ -254,7 +309,7 @@ require 'config/database.php';
     </div>
   </div>
   <div class="side right">
-    <div>150</div>
+    <div>60</div>
   </div>
   <div class="side">
     <div>4 star</div>
@@ -265,7 +320,7 @@ require 'config/database.php';
     </div>
   </div>
   <div class="side right">
-    <div>63</div>
+    <div>20</div>
   </div>
   <div class="side">
     <div>3 star</div>
@@ -276,7 +331,7 @@ require 'config/database.php';
     </div>
   </div>
   <div class="side right">
-    <div>15</div>
+    <div>13</div>
   </div>
   <div class="side">
     <div>2 star</div>
@@ -287,7 +342,7 @@ require 'config/database.php';
     </div>
   </div>
   <div class="side right">
-    <div>6</div>
+    <div>5</div>
   </div>
   <div class="side">
     <div>1 star</div>
@@ -298,7 +353,7 @@ require 'config/database.php';
     </div>
   </div>
   <div class="side right">
-    <div>20</div>
+    <div>7</div>
   </div>
 </div>
     </div>
@@ -308,18 +363,27 @@ require 'config/database.php';
 
 <footer>
 
-<div class="icon">
-<img src="image/twitter.png" style="width:2%;">
-<img src="image/facebook.png" style="width:2%;">
-<img src="image/whatsapp.png" style="width:2%;">
+<div class="request"><a href="#contact">REQUEST FOR QUOTE</a></div>
+
+<div class="fund">
+<h6 class="copy">Copyright © 2023 Reliatech. All Rights Reserved.</h6>
+<div class="term">
+<h6><a href="term-and-condition.php">Terms and Condition</a></h6>
+<h6><a href="refund-policy.php">Payment/Refund Policy</a></h6>
 </div>
-
-
-<h6 class="copy">Copyright 2023 by Reliatech. All Rights Reserved.</h6>
+</div>
 
 </footer>
 
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 <script src="js/script.js"></script>
     
 </body>
@@ -336,10 +400,12 @@ require 'config/database.php';
 <style>
 /*---nav begin----*/
 nav{
- border-bottom: 1px solid black;
- height: 200px;
- background: white;
- transition: all 0.3s ease;
+ height: 73px;
+ width: 100%;
+ background:white;
+ position: fixed;
+ border-bottom: 1px solid lightgrey;
+ z-index: 1;
 }
 
 nav .menu{
@@ -349,8 +415,31 @@ nav .menu{
 nav .menu{
     width: 30%;
     justify-content: space-between;
-    margin-left:-40%;
 }
+
+nav .sticky{
+  background: red;
+  padding: 30px 0;
+}
+
+.re{
+        color:  darkred;
+        font-size:60px;
+        font-family:Vivaldi;
+        font-weight:500;
+    }
+
+    .te{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: darkred;
+        font-size:25px;
+    }
+
+    .el{
+      font-size:25px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: black;
+    }
 
 nav .menu li{
     font-size:18px;
@@ -360,32 +449,50 @@ nav .menu li{
 
 nav .menu li a{
     text-decoration: none;
-    font-family: Segoe;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
     color: black;
+    transition: color 0.3s ease;
 }
 
+nav .menu li a:hover{
+  color:grey;
+  border-bottom: 2px solid darkred;
+}
 nav .navbar{
-    width:98%;
-    margin-top: -135px;
+    width:90%;
+    margin-top:-1.5%;
+    margin-left:1%;
+   
 }
 
-nav .navbar .logo img{
-width:40%;
+.logo{
+  width:13%;
+  height:80px;
+ text-align: center;
 }
 
 nav .web a{
      text-decoration: none;
-     font-size: 23px;
+     font-size: 21px;
      font-family: Segoe;
      color: white;
      background:darkred;
-     padding: 13px;
+     padding: 11px;
      cursor: pointer;
+     border-radius:50px;
 }
 
 nav .web{
-    margin-top:29px;
+   margin-top:1%;
+ 
+}
+
+nav .web a:hover{
+  background: white;
+  border: 1px solid darkred;
+  border-radius:50px;
+  color: darkred;
 }
 .checkbox div{
   width: 30px;
@@ -395,11 +502,12 @@ nav .web{
   display: none;
 }
 
-/*media query*/
-
-.webe {
+/* menu button styling*/
+.menu-btn {
   display: none;
 }
+
+
 
 
 /*-----home begin-----*/
@@ -422,35 +530,119 @@ nav .web{
     font-weight: 500;
 }
 
+.home .wab{
+  display: none;
+}
+
+
+
 /*------over-----*/
-.over h1{
-  font-size:50px;
-  text-align: center;
-  margin-top:7%;
-  font-weight: 500;
-}
-
-.over .client{
+.container{
   display: flex;
-  width: 30%;
+  margin-top: 5%;
+  width:72%;
   justify-content:space-between;
-  margin-left: 52%;
+  
 }
 
-.over .client h4{
-  font-size:25px;
+.static-text{
+  color: black;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+.dynamic-text{
+  margin-left: 1.3em;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic-text li{
+  list-style: none;
+  color: #cb0900;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide{
+  100%{
+    top: -360px;
+  }
+}
+
+.dynamic-text li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 80px;
+}
+
+.dynamic-text li span::after{
+ content: "";
+ position: absolute;
+ left: 0;
+ height: 108%;
+ width: 100%;
+ background-color: white;
+ border-left: 5px solid white;
+ animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing{
+  40%, 60%{
+    left: calc(100% + 250px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+.req{
+  margin-left: 42%;
+  margin-right: 45%;
+  font-size:20px;
+  margin-top: 2%;
+  border:2px solid darkred;
+  border-radius: 50px;
+  padding:7px;
+  width:15%;
+  text-align: center;
+}
+
+.req a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.req:hover{
+   background: darkred;
+   color: white;
+}
+
+.req a:hover{
+  color: white;
+}
+
+.requ{
+  display: none;
 }
 
 /*---About begins----*/
 .about{
     display: flex;
-    margin-top: 3%;
+    margin-top: 6%;
+    background-color: #f1f1f1;
+    height:500px;
 }
 .about h4{
     font-size: 33px;
     padding-top: 10%;
     margin-left: 4%;
-    font-family: Segoe;
+    font-family: Arial;
     font-weight: 500;
 }
 
@@ -472,17 +664,22 @@ nav .web{
     text-align: center;
     padding:1%;
 }
-
+.learn:hover{
+   background: orange;
+}
 .learn a{
     text-decoration: none;
     color: white;
+}
+
+.learn a:hover{
+  color: black;
 }
 
 .about .whopic{
     padding-top: 6%;
     padding-right:5%;
 }
-
 .about .whobg{
     background: orange;
     padding-bottom:6%;
@@ -494,15 +691,15 @@ nav .web{
     font-size:33px;
     padding-top:6%;
     text-align: center;
-    font-family: Segoe;
+    font-family: Arial;
     font-weight: 500;
 }
 
 .services .service-flex{
     display: flex;
-    margin-left: 8%;
+    margin-left: 6%;
     justify-content: space-between;
-    width: 85%;
+    width: 90%;
     margin-top:-4%;
 
 }
@@ -511,19 +708,79 @@ nav .web{
   font-size:23px;
   font-weight: 500;
   font-weight: 500;
+  font-family: Arial;
 }
 
 .services .service-flex h6{
   font-size:17px;
   font-family:segoe;
+  padding:3%;
 }
 
 
 .services .serv{
-    width:30%;
-    border:1px solid black;
-    padding: 1%;
+    width:32.5%;
+    border:1px solid grey;  
 }
+
+
+
+
+/*----------why choose-------*/
+
+.choose{
+  margin-top:10%;
+  background-color: #f1f1f1;
+  height:500px;
+}
+.choose h2{
+  text-align: center;
+  padding-top: 5%;
+}
+
+
+.choose .choose-flex{
+  display: flex;
+  width: 80%;
+  justify-content:space-between;
+  margin-left:10%;
+  margin-top: 5%;
+}
+.choose .choose-flex h6{
+  border: 1px solid lightgrey;
+  width:20%;
+  padding: 2%;
+  text-align: center;
+  background:white;
+}
+
+.choose .over-flex{
+  display: flex;
+  margin-top:5%;
+  margin-left:15%;
+}
+.choose .over-flex .cli{
+  background:#c04000;
+  width:40%;
+  color: white;
+}
+
+.choose .over-flex .finis{
+  background: #b31b1b;
+  width:40%;
+  color: white;
+}
+
+.choose .over-flex h1{
+  text-align: center;
+  font-size:55px;
+}
+
+.choose .over-flex h5{
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 
 
 
@@ -628,7 +885,13 @@ nav .web{
     text-align: center;
     font-family:Segoe; 
   }
+
+  option{
+    font-size:10px;
+  }
     
+
+ 
 /*-------review--------*/
 .contain{
     padding-top:5%;
@@ -716,91 +979,188 @@ nav .web{
 
 /*----footer-----*/
 
+.list{
+  margin-top:10%;
+  display: flex;
+  width:100%;
+  justify-content:space-between;
+  background:grey;
+  margin-bottom:-5%;
+  padding:5%;
+  color: white;
+}
+
+.list .servic{
+  width:80%;
+  margin-left: 5%;
+}
+.list .servic .abtt{
+  padding-top:5%;
+}
+
+.fund .copy{
+  color: grey;
+ }
+
+
  footer{
   margin-top: 5%;
-  background: #B2BEB5;
-  height:140px;
+  background: black;
+  height:10px;
   padding: 4%;
+  color: white;
+  border-top: 3px solid white;
  }
 
- footer .icon {
-  margin-left: 47%;
- }
-
- footer h6{
+ .request{
+  margin-left:40%;
+  margin-top: -3%;
+  background:white;
+  color: black;
+  border-radius: 50px;
+  width:20%;
   text-align: center;
+  padding:1%;
+ }
+
+ .request a{
+  color: black;
+  text-decoration: none;
  }
 
 
+ .term{
+  display: flex;
+  width:40%;
 
+ }
 
+ .term h6{
+  padding:5px;
+ }
+
+ .term h6 a{
+  text-decoration: none;
+  color: grey;
+ }
+
+ footer .fund{
+  display: flex;
+  width:80%;
+  justify-content: space-between;
+  margin-top:1%;
+ }
+
+ #mySidenav a{
+  display: none;
+ }
 
 
 
 /*----------Media Query----------*/
 
-@media screen and (max-width: 500px)
-{ 
-   .home{
-    margin-top: -26%;
-    background-size:contain;
-    height:200px; 
-}
-
-}
-@media screen and (max-width: 928px) 
+@media screen and (max-width: 900px) 
 {
 
+  nav{
+    margin-top: -18px;
+  }
   .navbar{
-    display:inline;
+    display:flex;  
   }
 
-  nav .navbar .logo img{
-    margin-top: -14%;
-    margin-left: 115px;
-  }
-  .home{
-    margin-top: -36%;
-    background-size:contain;
-    height:200px; 
+.re{
+        font-size:50px;
+    }
+
+    .re{
+        color:  darkred;
+        font-size:60px;
+        font-family:Vivaldi;
+        font-weight:500;
+    }
+
+    .te{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: darkred;
+        font-size:25px;
+    }
+
+    .el{
+      font-size:25px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: black;
+    }
+
+.home{
+    background-size:cover; 
 }
+
+.home .text2{
+  display: none;
+  
+}
+
+.home .wab{
+  display: inline;
+  color: white;
+  text-align: center;
+}
+
+.home .wab h3{
+padding-top: 130px;
+margin-left: 13px;
+font-size: 35px;
+width: 90%;
+font-weight: 500;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+line-height:63px;
+}
+
 ul li{
  display: none;
 }
 
 .web{
   display: none;
- 
 }
 
-
-
-.home .text2{
-      display: none;
+.requ{
+  display: inline;
+  font-size:15px;
+  margin-top: 50px;
+  margin-left:33%;
+  background:darkred;
+  border-radius: 50px;
+  padding:13px;
+  width:5%;
+  text-align: center;
 }
 
-.over h1{
-  font-size: 30px;
+.requ a{
+  text-decoration: none;
+  color:white
+
 }
 
-.over .client{
-  width:60%;
-   margin-left: 90px;
+.container{
+  display: none;
+}
+.req{
+  display: none;
 }
 
-.client h4{
-   background:orange;
-   padding:4px;
-   border-radius:5px;
-}
-
-.over .finish{
-  margin-left: -55%;
+.whopic{
+  display: none;
 }
 
 .about{
+  height:635px;
+}
+.about .who{
   display: inline;
   text-align: center;
+  margin-top: 30px;
 }
 
 .about h4{
@@ -811,7 +1171,7 @@ ul li{
 .about h6{
   margin-left: 9%;
   font-size: 17px;
-  line-height:30px;
+  line-height:35px;
 }
 
 .about .whopic{
@@ -826,7 +1186,7 @@ ul li{
 
 .whobg{
   width:100%;
-  border-bottom-left-radius: ;
+  
 }
 
 .who .learn{
@@ -837,7 +1197,7 @@ ul li{
 }
 
 .services{
-  margin-top:5%;
+  margin-top:10%;
 }
 
 .services h4{
@@ -858,14 +1218,44 @@ ul li{
   border:none;
 }
 
+.choose .choose-flex{
+  display: inline;
+}
+
+.choose .choose-flex h6{
+  width: 80%;
+  padding:18px;
+  margin-left: 35px;
+}
+
+.choose .over-flex{
+  display: inline;
+}
+
+.choose .over-flex .cli{
+  width: 80%;
+  padding:5px;
+  margin-left: 35px;
+}
+
+.choose .over-flex .finis{
+  width: 80%;
+  padding:5px;
+  margin-left: 35px;
+}
+
+
+
+.how{
+  margin-top: 130px;
+}
 .how .how-flex{
   display: inline;
  
 }
 
-.img img {
-  width: 100%;
-  border-bottom-left-radius:35%;
+.how-flex .imgbg {
+  display:none;
 }
 
 .step{
@@ -914,47 +1304,140 @@ ul li{
     width:100%;
   }
 
+   footer{
+    height: 70px;
+   }
+  .request{
+    display: none;
+  }
+
+  footer .fund{
+    display: inline;
+  }
+
+  footer .copy{
+    font-size: 13px;
+    text-align: center;
+  }
+
+  footer .term{
+    width: 97%;
+    margin-left:3%;
+    margin-top: -3%;
+  }
+
+  footer .term a{
+    font-size:14px;
+  }
+
+  footer .term h6{
+    border: none;
+  }
+
+
+  /*menu-btn */
+
+.menu-btn {
+  display: block;
 }
 
-@media screen and (max-width: 1100px) and (min-width: 700px)
+#mySidenav a{
+  display: block;
+ }
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  line-height: 70px;
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 1180px) and (min-width: 700px)
 {
 
   nav{
-    border-bottom: none;
-    height:85px;
+    height:100px;
   }
- .navbar .menu{
-   display: none;
- }
- nav .navbar .logo{
-  margin-left:23%;
- }
 
 
- .navbar .web{
-  display: none;
- }
-
- .home{
-    margin-top:1px;
-    background-size:cover;
-    height:400px; 
+.navbar .logo{
+  padding-top: 4%;
 }
 
-.over h1{
-  font-size: 30px;
+.home .wab{
+  display: inline;
+  color: white;
+  text-align: center;
 }
 
-.over .client{
-  width:40%;
-  margin-left:30%;
+.home .wab h3{
+padding-top: 150px;
+text-align: center;
+font-size: 35px;
+width: 90%;
+font-weight: 500;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+line-height:105px;
 }
 
-.client h4{
-   background:orange;
-   padding:4px;
-   border-radius:5px;
+.requ{
+  display: inline;
+  font-size:15px;
+  margin-top: 50px;
+  margin-left:40%;
+  background:darkred;
+  border-radius: 50px;
+  padding:13px;
+  width:5%;
+  text-align: center;
 }
+
+.requ a{
+  text-decoration: none;
+  color:white
+
+}
+
+.menu-btn {
+  display: block;
+  margin-top:6%;
+}
+
 .about{
   display: inline;
 }
@@ -965,17 +1448,69 @@ ul li{
 
 .about .who h4{
   text-align: center;
+  font-size: 38px;
 }
 
 .about .who h6{
   margin-left:10%;
+  font-size: 23px;
 }
 
 .about .who .learn{
   margin-left:35%;
   width: 30%;
+  font-size:22px;
 }
 
+.services .serv{
+  width: 70%;
+  margin-left: 15%;
+}
+
+.services h4{
+  font-size:38px;
+}
+.services .service-flex h4{
+  font-size:28px;
+  padding:3%;
+}
+
+.services .service-flex h6{
+  font-size:26px;
+  padding:3%;
+}
+
+.choose{
+  height:700px;
+}
+.choose h2{
+  font-size:38px;
+}
+
+.choose .choose-flex h6{
+  border: 1px solid lightgrey;
+  width:90%;
+  padding: 2%;
+  text-align: center;
+  background:white;
+  font-size:23px;
+}
+
+.choose .over-flex .cli{
+  background:#c04000;
+  width:90%;
+  color: white;
+}
+
+.choose .over-flex .finis{
+  background: #b31b1b;
+  width:90%;
+  color: white;
+}
+
+.how{
+  margin-top: -2%;
+}
 .how .how-flex{
   display: inline;
 }
@@ -1002,41 +1537,59 @@ ul li{
   margin-left: -20%;
 }
 
+.steps{
+  margin-top: -5%;
+}
+.steps h4{
+    font-size:25px;
+    color:darkred;
+}
+
+.steps h6{
+    font-size:22px;
+}
+
 .form{
   width:90%;
   margin-left: 5%;
 }
 .form input[type=text], select, textarea {
     width: 80%; 
+    font-size: 20px;
   }
 
 .contain .head{
   margin-left:20%;
+ font-size: 24px;
+}
+
+.contain p{
+ font-size: 22px;
 }
 .contain .cont{
   margin-left: 20%;
 }
 
-.foter{
-  height:100px;
-}
 
-.foter .foot{
-  display: none
-}
+  
 
-.footer .copy{
-  font-size: 25px;
-}
+  footer .term{
+    width: 97%;
+    margin-left:3%;
+    margin-top: -3%;
+    justify-content: space-between;
+  }
 
-.foter .icon{
-  width: 35%;
+  footer .term a{
+    font-size:14px;
+  }
 
-}
+  footer .term h6{
+    border: none;
+  }
 
-.foter .icon img{
-  margin-left: 20px;
-}
+
+
 
 }
 </style>

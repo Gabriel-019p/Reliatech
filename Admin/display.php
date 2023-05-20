@@ -3,7 +3,7 @@ require 'config/database.php';
 
 //check login status
 
-$query = "SELECT * FROM messages id";
+$query = "SELECT * FROM messages  ORDER BY date_time DESC";
 $messages = mysqli_query($connection, $query); 
 ?>
 
@@ -34,17 +34,17 @@ $messages = mysqli_query($connection, $query);
  <thead>
     <tr>
         <th>Name</th>
-        <th>Phone Number</th>
         <th>Country</th>
-        <th>Message Sent</thh>
+        <th>Time</th>
+       <th>Message Sent</thh>
     </tr>
  </thead>
  <tbody>
  <?php while ($message = mysqli_fetch_assoc($messages)) :?>
    <tr>
      <td><?= $message['name'] ?></td>
-     <td><?= $message['number'] ?></td>
      <td><?= $message['country'] ?></td>
+     <td><?= $message['date_time'] ?></td>
      <td><a href="see-message.php?id=<?= $message['id'] ?>" class="btn sm">View</a></td>
 
     <?php endwhile ?>
